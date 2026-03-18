@@ -18,8 +18,3 @@ Once cloned, you can run the game by executing the Python script in your termina
 ```bash
 python3 TTT.py
 ```
-
-## 🛠 Planned Improvements
-- [ ] Add player score tracking
-- [ ] Add a "Reset Game" button
-- [ ] Develop an AI single-player mode
