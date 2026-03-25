@@ -5,6 +5,7 @@
 ## 📺 Inspiration 
 This project was built following the tutorial available here:
 [YouTube Tutorial](https://www.youtube.com/watch?v=nbRpDXV7QDM)
+6:20
 
 ## 🎮 Features
 - **Graphical User Interface (GUI):** Built using Python's built-in `tkinter` library.

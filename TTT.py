@@ -17,4 +17,7 @@ window = tk.Tk()
 window.title("Tic Tac Toe")
 window.resizable(False, False)
 
+frame = tk.Frame(window)
+label = tk.Label()
+
 window.mainloop()
