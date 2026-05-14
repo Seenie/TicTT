@@ -42,18 +42,41 @@ def check_winner():
             return
     
     if (board[0][0]["text"] == board[1][1]["text"] == board[2][2]["text"] and board[0][0]["text"] != ""):
-        label.config(text=board[0][column]["text"]+"is the winner!", foreground=color_light_blue)
+        label.config(text=board[0][0]["text"]+" is the winner!", foreground=color_light_blue)
         for i in range(3):
             board[i][i].config(foreground=color_light_blue, background=color_red)
-            game_over = True
-            return
-    
-    
-    
+        game_over = True
+        return
 
+    if  (board[0][2]["text"] == board[1][1]["text"] == board[2][0]["text"] and board[0][2]["text"] != ""):
+        label.config(text= board[0][2]["text"] + " is the winner!", foreground=color_light_blue)
+        board[0][2].config(foreground=color_light_blue, background=color_red)
+        board[1][1].config(foreground=color_light_blue, background=color_red)
+        board[2][0].config(foreground=color_light_blue, background=color_red)
+        game_over = True
+        return
+
+    if (turns == 9 and not game_over):
+        label.config(text="It's a tie!")
+        game_over = True
+        return
 
 def new_game():
-    pass
+    global turns, game_over, curr_player
+    turns = 0
+    game_over = False
+    curr_player = playerX
+    for row in range(3):
+        for column in range(3):
+            board[row][column]["text"] = ""
+            board[row][column].config(foreground=color_red, background=color_purple)
+    label.config(text=curr_player+"'s turn")
+    
+
+
+
+
+
     
 playerX = "X"
 playerO = "O"
